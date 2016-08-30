@@ -1,0 +1,255 @@
+$first: #31323d;
+$second: #3a3b49;
+$highlight: #4ad7b1;
+$white: #ffffff;
+
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        background: transparent;
+    }
+
+html body{
+	font-family: 'Lato', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+header{
+	
+	background: $first url("http://simpleicon.com/wp-content/uploads/stars.svg");
+	background-size: contain;
+	background-repeat: repeat;
+	padding: 0;
+	margin: 0;
+
+
+}
+
+nav{
+	background: $second;
+
+
+}
+
+.aside{
+
+		padding-left: 5px;
+		border-left: 1px solid white;
+		font-style: italic;
+		font-size: 1.1em;
+		color: darken($white, 62%);
+}
+
+.navigation{
+	padding: 2em;
+	a{
+		color: $white;
+		text-decoration: none;
+		font-size: 1.6em;
+		font-style: italic;
+
+		&:hover {
+			color: $highlight;
+		}
+	}
+	a:nth-child(2), a:nth-child(3){
+		padding-left: 15px;
+	}
+	a:nth-child(3){
+		padding-right: 25px;
+	}
+
+	
+}
+
+.wrapper{
+	max-width: 90%;
+
+	
+	h1{
+		color: $white;
+		font-size: 3.1em;
+		line-height: 130%;
+		padding: 2em;
+		float: none;
+		text-transform: uppercase;
+	}
+}
+
+.gallery{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	li{
+		width: 25%;
+		float: left;
+		display: inline-block;
+		margin-bottom: -3px;
+		position: relative;
+		overflow: hidden;
+		transition: transform 0.4s, opacity 0.1s 0.3s;
+		
+	}
+	img{
+		width: 100%;
+		max-width: 100%;
+		height: 14em;
+	}
+}
+
+.img-info{
+	background: rgba($highlight,0.85);
+	width: 100%;
+	height: 100%;
+	padding: 2em;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	padding: 3.7em;
+	opacity: 0;
+	transform: translateY(100%);
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	h2{
+		font-size: 1.5em;
+		color: $white;
+		text-transform: uppercase;
+		line-height: 1;
+		margin-bottom: 1.5em;
+	}
+	.btn{
+		text-decoration: none;
+		color: $white;
+		border: 2px solid $white;
+		border-radius: .5em;
+		text-transform: uppercase;
+		padding: 1em 1.5em;
+		font-size: .9em;
+		transition: all 0.3s ease-in-out;
+		&:hover{
+			color: $first;
+			border: 2px solid $first
+		};
+	}
+	.price{
+		display: inline;
+		font-weight: 720;
+		color: $first;
+		padding-left: 1.3em;
+		font-size: 1.2em;
+	}
+	
+}
+footer{
+	background: lighten($first,5%);
+	height: 100%;
+
+}
+
+.socials{
+	padding: 5em;
+	display: inline-block;
+	img{
+		float: right;
+		padding: 5px;
+		margin-top: 2em;
+		width: 3em;
+		height: 3em;
+
+	}
+	span{
+		float: right;
+		color: $white;
+	}
+
+}
+
+li:hover{
+	.img-info{
+		opacity: 1;
+		transform: translateY(0px);
+		transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+	img{
+		transform: scale(1.5);
+		transition: transform 0.4s, opacity 0.1s 0.3s;
+	}
+}
+
+/* RESPONSIVE BREAKPOINTS*/
+
+@media only screen and (max-width: 1270px){
+	.gallery{
+		li{
+			width: 33.33%;
+		}
+	}
+	.wrapper{
+
+	h1{
+		
+		font-size: 2.8em;
+		padding: 1.7em;
+		
+	}
+}
+.navigation{
+	padding: 1.8em;
+	a{
+		font-size: 1.4em;
+	}
+}
+
+}
+
+@media only screen and (max-width: 800px){
+	.gallery{
+		li{
+			width: 50%;
+		}
+	}
+	.wrapper{
+
+	h1{
+		
+		font-size: 2.5em;
+		padding: 1.4em;
+		
+	}
+}
+.navigation{
+	padding: 1.65em;
+	a{
+		font-size: 1.2em;
+	}
+}
+
+}
+
+@media only screen and (max-width: 550px){
+	.gallery{
+		li{
+			width: 100%;
+		}
+	}
+		.wrapper{
+
+	h1{
+		
+		font-size: 1.55em;
+		padding: 1em;
+		
+	}
+}
+.navigation{
+	padding: 1.4em;
+	a{
+		font-size: .9em;
+	}
+}
+
+}
+
